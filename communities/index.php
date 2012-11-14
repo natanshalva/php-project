@@ -56,6 +56,7 @@ require ('class/society.php');
 					<input type="submit" name="singlesociety"/>					
 				</form>
 				<?php 
+				// activate function to get values from the form and validates the values
 				$validated_array = input_validation();
 				
 				##################################
