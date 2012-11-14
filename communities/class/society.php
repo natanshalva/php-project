@@ -41,8 +41,7 @@ class Society{
 				#// print_r($_POST);
 				##################################
 				
-				# We test if we got result from the $_POST['onesociety']
-				if (!empty($name_of_society)) {
+				
 					
 					# Insert the post value into a variable
 					$singlesociety = $name_of_society;
@@ -81,7 +80,7 @@ class Society{
 						echo "This society doesn't exist.";
 					} # END IF
 					
-				} # END IF - if (!empty($_POST['onesociety']))
+				 
 				
 		}
 	

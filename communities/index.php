@@ -64,9 +64,11 @@ require ('class/society.php');
 				# die;
 				################################
 				# Print details about selected society
+				# We test if we got result from the $_POST['onesociety']
+				if (!empty($validated_array['onesociety'])) {
 				$society->get_details_about_selected_society($connection, 
 															$validated_array['onesociety']); 
-				
+				}
 				?>
 			</div> <!-- END <div id="singlesociety">  -->
 				
