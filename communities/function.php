@@ -74,6 +74,8 @@ function input_validation(){
 			# we want to see the effect
 			//echo "trim:" . $validated_post[$key] . "<br />";
 			$validated_post[$key] = $val_trim;
+			
+			
 		}
 		# the eco for development only
 		# we want to see the effect
