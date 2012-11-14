@@ -47,34 +47,33 @@ function input_validation(){
 			
 		foreach($_POST as $key => $value){
 			
-			
-			
-			# Lets make sure we have no capital letters
-			$validated_post[$key] = strtolower($value);
-			# the eco is for development only
-			# we want to see the effect
-			// echo "strtolower:" . $validated_post[$key] . "<br />";
-			
 			# Lets make sure that there no more than 20 characters
 			if(strlen($value) > 40){
 				echo "Too many characters";
 				return FALSE;
 			}
 			
+			
+			# Lets make sure we have no capital letters
+			$val_lowercase = strtolower($value);
+			# the eco is for development only
+			# we want to see the effect
+			// echo "strtolower:" . $validated_post[$key] . "<br />";
+			
+			
 			# Lets make sure we have no html tags
-			$validated_post[$key] = strip_tags($validated_post[$key]);
+			$val_nohtml = strip_tags($val_lowercase);
 			# the eco is for development only
 			# we want to see the effect
 			// echo "strip_tags:" . $validated_post[$key] . "<br />";
 			
 			# Lets make sure that there is no white space in the beginning
 			# and in the end
-			$validated_post[$key] = trim($validated_post[$key]);
+			$val_trim = trim($val_nohtml);
 			# the eco for development only
 			# we want to see the effect
 			//echo "trim:" . $validated_post[$key] . "<br />";
-				
-			
+			$validated_post[$key] = $val_trim;
 		}
 		# the eco for development only
 		# we want to see the effect
