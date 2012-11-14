@@ -82,23 +82,8 @@ require ('class/society.php');
 				<?php
 				
 				# We dont start if we dont have value for $_POST['societyfamilies'] 
-				if (!empty($_POST['societyfamilies'])) {
-					$familiesbysociety = $_POST['familiesbysociety'];
-					
-					# Get all families from one society 
-					$query = "SELECT * FROM families WHERE community_id = '{$familiesbysociety}'";
-					$result = n_query($query, $connection);
-					while ($row = mysql_fetch_assoc($result)) {
-							
-						
-						if($row != FALSE) {
-							foreach ($row as $key => $value) {
-								echo $value . " - ";
-							}
-						} else {
-							echo "There are no families in this society.";
-						}
-					}
+				if (!empty($validated_array['societyfamilies'])) {
+				$family ->get_all_families_from_one_society($validated_array['familiesbysociety'], $connection);
 				}
 				?>
 			</div>

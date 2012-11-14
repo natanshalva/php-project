@@ -39,8 +39,28 @@
 				echo "</table>";
 				
 	}
-				
+
+	function get_all_families_from_one_society($familiesbysociety , $connection){
+	
+					
+					# Get all families from one society 
+					$query = "SELECT * FROM families WHERE community_id = '{$familiesbysociety}'";
+					$result = n_query($query, $connection);
+					while ($row = mysql_fetch_assoc($result)) {
+							
+						
+						if($row != FALSE) {
+							foreach ($row as $key => $value) {
+								echo $value . " - ";
+							}
+						} else {
+							echo "There are no families in this society.";
+						}
+					}
 }
-// END
+			
+}  // END of class	
+ 
+
 
 ?>
