@@ -1,0 +1,14 @@
+body {
+	margin:0;
+}
+
+#main {
+	width:800px;
+	min-height:500px;
+	border:1px solid blue;
+	margin:100px auto;
+}
+
+table, tr, td {
+	border: 1px solid black;
+}
