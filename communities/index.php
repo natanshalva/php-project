@@ -1,6 +1,8 @@
 <?php
+require ('db.php');
+
 # Bring MySQL configuration from config.php
-require ('config.php') ;
+//require ('config.php') ;
 
 # Load function from function.php
 require ('function.php');

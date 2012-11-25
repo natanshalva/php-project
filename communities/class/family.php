@@ -1,5 +1,7 @@
 <?php 
 
+require_once ('db.php');
+
 ##########################
 #
 # This is Family class. This class deals with all the family matters.
