@@ -1,10 +1,10 @@
 <?php 
 
-require '../class/db.php';
+require '/class/db.php';
 
 echo $db->last_query;
 
-require 'html/header.php';
+require 'pages/html/header.php';
 ?>
 
 <div id="main">
@@ -72,18 +72,18 @@ require 'html/header.php';
 		</aside>
 		<article>
 			<form method="post" action="">
-				<input type="txet" name="name" />
-				<input type="txet" name="family" />
-				<input type="txet" name="username" />
-				<input type="txet" name="email" />
-				<input type="txet" name="pass" />
-				<input type="submit" name="register" />
+				<p><input type="txet" name="name" /></p>
+				<p><input type="txet" name="family" /></p>
+				<p><input type="txet" name="username" /></p>
+				<p><input type="txet" name="email" /></p>
+				<p><input type="txet" name="pass" /></p>
+				<p><input type="submit" name="register" /></p>
 			</form>
 		</article>
 	</div>
 </div>
 <?php
 
-require 'html/footer.php';
+require 'pages/html/footer.php';
 ?>
 

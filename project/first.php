@@ -1,16 +1,11 @@
 <?php 
-//$_SESSION['favcolor'] = 'green';
-
-
-print_r($_SESSION);
-//die();
 
 require '/class/db.php';
 
 echo $db->last_query;
 
 
-require 'pages/html/header.php';
+require './pages/html/header.php';
 ?>
 
 <div id="main">
@@ -55,7 +50,7 @@ require 'pages/html/header.php';
 					
 				</div>
 				<div id="register">
-					<a href="pages/register.php">Register</a>
+					<a href="register.php">Register</a>
 				</div>
 				<ul>
 					<li class="btn">
