@@ -1,0 +1,706 @@
+/* #############################################
+ * ##### Sasson - advanced drupal theming. #####
+ * #############################################
+ *   
+ * SITENAME theme main stylesheet.
+ * 
+ *  Index
+ *  -----------
+ *  1. Imports and Definitions
+ *  2. General Sitewide Styles
+ *    -- Layout
+ *    -- General Styles
+ *    -- Typography
+ *    -- Links 
+ *    -- Header
+ *    -- Sidebars
+ *    -- Footer
+ *  3. Front Page
+ *  4. Inner Pages
+ *  5. Forms
+ * 
+ */
+
+@font-face { font-family: south; src: url('SouthLight.otf'); } 
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+// @import "compass/css3";           // Uncomment to use CSS3 mixins (http://compass-style.org/reference/compass/css3/)
+// @import "960/grid";               // Uncomment to use grid mixins (see Sasson's layout partials for examples)
+// @import "partials/mixins";        // Uncomment to call your own mixins partial (check your /partials directory)
+// @import "sprites/smart";          // Uncomment to call your 'smart' sprite (check your /images/sprites directory)
+  @import "sprites/horz";
+/*-----------------------------------------------
+          General Sitewide Styles
+-----------------------------------------------*/
+
+@mixin img-replace($width, $height, $imgurl, $position: 0 0) {
+  width: $width;
+  height: $height;
+  background: url('#{$imgurl}') no-repeat transparent #{$position};
+  display: block; 
+  bo	rder: 0; 
+  text-indent: -999em; 
+  overflow: hidden; 
+  text-align: left; 
+  direction: ltr;
+  
+  br {
+  display: none;
+  }
+}
+
+
+
+
+/* -----  Layout  ----- */
+
+/* -----  General Styles (Colors, Backgrounds etc.)  ----- */
+
+body {
+  background: #E4EADD;
+  overflow-x: hidden;
+ color: #75533B;
+ font-family: south;
+}
+
+#main {
+  width: 100%;
+  height: 630px;
+  //@include img-replace( 600px , 400px , ../images/Fistooki_Logo4BG-22.png , 50% 0 );
+  //margin-right: 0;
+  //margin-left: 0;
+   background: url('../images/Fistooki_Logo4BG-22.png') no-repeat 50% 0;
+}
+#page {
+  margin-top: 55px;  
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.n_con {
+  padding-right: 15px;
+}
+/* -----  Typography  ----- */
+a {
+  text-decoration: none;
+}
+/* -----  Links  ----- */
+
+/* -----  header  ----- */
+
+#header {
+ //width: 200px;
+ height: 89px;
+ img {
+  margin: -16px 23px 0;
+  cursor: pointer;
+ }
+}
+
+/* -----  menu  ----- */
+
+#main-menu {
+  width: 500px;
+  margin: 50px 0 0;
+}
+
+#block-views-news-block {
+ 
+  
+
+}
+#block-block-4 {
+ // border: 1px solid red;
+  float: left;
+  box-shadow: inset 0 -8px 8px -5px #CCC;
+  color: #75533B;
+  margin: 0 0 0 -12px;
+  
+  ul {
+    margin: 30px 0 0  ;
+    padding: 0;
+   // border: 1px solid red;
+   width: 678px;
+   
+  }
+  li {
+    list-style: none;
+    float: left;
+    background: white;
+    margin: 0 6px;
+    padding: 2px 7px 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 14px
+   // font-weight: bold;
+
+   
+  }
+  li.first {
+  //  margin: 0 10px 0 0;
+  }
+  li:hover {
+    color: #5328DA;
+    cursor: pointer;
+    margin: -13px 6px 0;
+    padding: 9px 7px 6px;
+  }
+  li.topmenu-slected {
+    margin: -13px 6px 0;
+    padding: 9px 7px 6px;
+  }
+  li.selcet {
+    color: #5328DA;
+  }
+}
+
+/* -----  Sidebars  ----- */
+
+/* -----  Footer  ----- */
+#block-block-3 {
+  font-size: 14px;
+ // font-weight: bold;
+  margin: 25px 0;
+  a {
+    color:#75533B;
+  }
+}
+#facebook {
+  float: left;
+  margin: 0 0 0 -21px;
+  
+  .facebook_logo {
+    margin: -5px 0 0;
+     float: left;
+     @include img-replace( 24px , 24px , ../images/facebook-24.png , 0 0);
+     display: inline-block;
+     padding: 0 10px 0 0;
+  }
+}
+#all_right {
+  float: right;
+  padding: 0 15px;
+  
+  div {
+    float: right;
+    margin: 0 7px 0 0;
+    span {
+      padding: 0 0 0 7px;
+    }
+  }
+  span.n_bor {
+   height: 11px;
+    width: 3px;
+    border-left: 1px solid;
+   padding: 0;
+    display: inline-block;
+    float: left;
+    margin: 3px 0 0;
+
+  }
+}
+/*-----------------------------------------------
+                 Front Page
+-----------------------------------------------*/
+#block-block-2 {
+  
+
+  
+}
+
+
+#n_front  {
+ // background: url("../images/Fistooki_Web_Home_Picture.jpg") no-repeat 3px 3px ;
+  height: 622px;
+  position: relative;
+  float: left;
+  background: #E4EADD;
+  overflow: hidden;
+
+  ul{
+    margin: 0 ;
+    padding:2px 0 0 3px;
+  }
+  li {
+   float: left;
+   width: 313px;
+   height: 202px;
+   border-radius: 15px;
+   //background: #ccc;
+  // text-indent: -9999px;
+   margin: 0 5px 4px 0;
+   padding:0;
+   //opacity: 0.5;
+   display: inline-block;
+  // border: 1px solid;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   
+   div {
+     cursor: pointer;
+     width: 312px;
+     height: 404px;
+     position: absolute;
+     opacity: 0;
+     bottom: -100%; 
+     top: 202px;
+     -webkit-transition: all 0.6s ease;
+     -moz-transition:    all 0.6s ease;
+     -o-transition:      all 0.6s ease;
+
+   }
+   
+  }
+  
+  
+  li:hover div {
+     opacity: 1;
+     top: 0;
+  }
+  li#top_left  {
+    background: url("../images/Ani_Maamin.png") no-repeat 0px 0px ;
+  }
+  li#top_left div   {
+    background: url("../images/Ani_Maamin_Over.png") no-repeat 0px 0px ;
+    cursor: pointer;
+  }
+ 
+  
+  //  -------------- //
+  
+  li#top_middle {
+    background: url("../images/Me_Ani.png") no-repeat 0px 0px ;
+  }
+  
+  li#top_middle  div{
+   background: url("../images/Me_Ani_Over.png") no-repeat 0px 0px ;   
+  }
+  
+  
+ //  -------------- //
+
+  li#top_right {
+     background: url("../images/Logo.png") no-repeat 0px 0px ;   
+  }
+  
+    //  -------------- //
+    
+  li#middle_left {
+    background: url("../images/Metzayrim.png") no-repeat 0px 0px ;   
+  }
+  li#middle_left div {
+    background: url("../images/Metzayrim_Over.png") no-repeat 0px 0px ;   
+  }
+   //  -------------- //
+  
+  li#middle_middle {
+     background: url("../images/Tipim.png") no-repeat 0px 0px ;   
+  }
+   li#middle_middle div  {
+     background: url("../images/Tipim_Over.png") no-repeat 0px 0px ;   
+  }
+  
+   //  -------------- //
+  
+  li#middle_right {
+   background: url("../images/Hafaalot.png") no-repeat 0px 0px ;    
+  }
+   li#middle_right div {
+   background: url("../images/Hafaalot_Over.png") no-repeat 0px 0px ;    
+  }
+    //  -------------- //
+  li#bottom_left{
+     background: url("../images/Zor_Kesher.png") no-repeat 0px 0px ; 
+  }
+  li#bottom_left div {
+     background: url("../images/Zor_Kesher_Over.png") no-repeat 0px 0px ; 
+  }
+    //  -------------- //
+  li#bottom_middle{
+    background: url("../images/Sirtonim.png") no-repeat 0px 0px ;   
+  }
+   li#bottom_middle div {
+    background: url("../images/Sirtonim_Over.png") no-repeat 0px 0px ;   
+  }
+    //  -------------- //
+  li#bottom_right {
+     background: url("../images/Hamlatzot.png") no-repeat 0px 0px ; 
+  }
+   li#bottom_right div {
+     background: url("../images/Hamlatzot_Over.png") no-repeat 0px 0px ; 
+  }
+  
+}
+
+
+
+/*-----------------------------------------------
+                 Inner Pages
+-----------------------------------------------*/
+
+/* ----- colors --------- */
+
+
+  .top_left {
+   color: #FDB931;  
+  }
+   .top_middle {
+   color: #00ADEE;  
+  }
+  .middle_left {
+   color: #cbdb2a;  
+  }
+  .middle_middle {
+    color: #74D8BA;
+  }
+  .middle_right {
+    color: #FE5C83;
+  }
+  .bottom_left {
+    color: #7F3F98;
+  }
+  .bottom_middle {
+    color: #8AD1DE;
+  }
+  .bottom_right{
+    color: #00A651;  
+  }
+
+.region-content {
+  
+  position: relative;
+  
+}
+
+.n_sel span.field-content{
+  display: none;
+}
+.n_left {
+  float: left;
+ // border: 1px solid red;
+  width:615px;
+}
+.n_right {
+  float: left;
+ // border: 1px solid blue;
+  width:325px;
+  padding: 17px 0 0;
+}
+.n_in_logo {
+  // background: url('./images/Fistooki_Web_Home_Picture.png');
+  @include img-replace( 237px , 93px , ../images/Fistooki_Web_logo.png , 0 0);
+  float: right;
+  cursor: pointer;
+}
+.view-main .field-name-field-inside-title {
+  clear: both;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 32px 0 0;
+  padding: 15px;
+}
+
+.field-name-field-small {
+  float: left;
+  width: 50%;
+}
+.n_ex {
+  height: 40px; 
+}
+.n_small_menu {
+  width: 49%;
+  float: left;
+  ul {
+    margin: 0;
+    padding: 0 0 0 22px;
+  }
+  li {
+    list-style: none;
+    float: left;
+    background: #E4EADD;
+    border-radius: 2px;
+    height: 25px;
+    width: 40px;
+    margin: 2px;
+  }
+}
+.front .block {
+ // position: relative;
+  //left: 1028px;
+// float: left;
+ //width: 100%;
+}
+
+.front .view-main .views-row {
+  display: none;
+ position: absolute;
+  //left: 1028px;
+ top: 0;
+ left: 1500px;
+ width: 100%;
+ height: 615px;
+ border-radius: 15px;
+ background: #fff;
+}
+
+.front .view .views-row.thisOn {
+  display: block;
+}
+
+.n_left {
+  position:relative;
+  width: 615px;
+  height: 597px;
+  float: left;
+  
+}
+
+.field-name-field-image-fi {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:8;
+ // display: none;
+  float: left;
+  margin: 20px 0 0 15px;
+  img {
+    border-radius: 15px;
+    width: 600px;
+    height: 575px;
+  }
+}
+
+.field-name-field-image-fi.active{
+   z-index:10;
+}
+
+
+.field-name-field-image-fi.last-active{
+   z-index:9;
+}
+
+.field-name-field-in-menu {
+
+  float: right;
+  padding: 0 10px;
+  margin: 0 0 20px;
+  cursor: pointer;
+  line-height: 13px;
+  border-left: 1px solid;
+}
+.field-name-field-in-menu:nth-child(1){
+ padding: 0 0 0 10px;
+}
+
+.bordeNone {
+  border-left: none;
+}
+
+
+.field-name-field-in-text-fi  {
+  clear: both;
+  display: none;
+  padding: 0px 0 12px 25px;
+  font-size: 12px;
+  height: 291px;
+   color: #75533B;
+  // overflow: hidden;
+   overflow-y: scroll;
+ // border: 1px solid pink;
+}
+  
+.views-row-2 .field_video_description {
+ //float: left;
+ height: 295px;
+ padding:0 16px;
+}  
+  
+.field-name-field-video-description {
+  cursor: pointer; 
+}  
+  
+.field-name-field-video {
+  display: none;
+  margin: 150px 0 0 ;
+}
+
+/*.video:first-child  {
+  display: block; 
+}*/
+
+
+
+/* ------ Top menu -------*/
+
+
+
+/* ------ small menu -------*/
+
+.n_small_menu  {
+  li { cursor: pointer;}
+  
+  .pointer {
+    cursor: auto;
+  }
+  
+  .top_left_bg{
+   background: #FDB931;  
+  }
+   .top_middle_bg {
+   background: #00ADEE;  
+  }
+  .middle_left_bg {
+   background: #cbdb2a;  
+  }
+  .middle_middle_bg {
+    background: #74D8BA;
+  }
+  .middle_right_bg {
+    background: #FE5C83;
+  }
+  .bottom_left_bg {
+    background: #7F3F98;
+  }
+  .bottom_middle_bg {
+    background: #8AD1DE;
+  }
+  .bottom_right_bg{
+    background: #00A651;  
+  }
+
+}
+
+
+/* ------  drawing to Fistuki  ------- */
+.field-name-body {
+  clear: both;
+  padding: 12px 12px 12px 25px;
+  font-size: 12px;
+  height: 263px;
+   color: #75533B;
+   overflow: hidden;
+ //  overflow-y: scroll;
+ // border: 1px solid pink;
+}
+#n_drawing {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    float: right;
+    border: 1px solid black;
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    
+  }
+  li:hover {
+   background: #000;  
+  }
+  
+}
+
+
+
+/*-----------------------------------------------
+                   Forms
+-----------------------------------------------*/
+
+#node-21 {
+  display: none;
+  clear: both;
+  overflow: hidden;
+  color: #75533b;
+  
+  .content {
+    width: 282px;
+    
+    img {
+     
+    }
+      
+  }
+  
+  .field-name-body p { 
+      
+        margin: 3px 0 0 ;
+        font-size: 17px;              
+         
+      span {
+        float: left;
+      }
+      
+      a#ma {
+        color: #00ADEE;   
+      }   
+        
+      img {
+        margin: 0 0 0 15px;   
+      }    
+  }            
+  
+}
+
+#node-21 a {
+  color: #75533b;
+}
+
+#node-21 h2 , .submitted {
+  display: none;
+}
+#node-21 .field-name-body {
+  height: 100px;
+  line-height: 20px;
+   margin: 0 0 15px 5px;
+   padding: 0   
+}
+#node-21 h4 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+#node-21 input {
+  width: 200px;
+  float: left;
+  border: none;
+  background: #e4eadd;
+  line-height: 21px;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+#node-21 textarea {
+  width: 221px;
+  float: left;
+  border: none;
+  background: #e4eadd;
+  line-height: 18px;
+  padding: 3px 10px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  margin: -22px 0 17px;
+}
+#node-21 input#edit-submit {
+  width: 50px;
+  clear: both;
+  color: #75533b;
+  font-weight: bold;
+}
+#node-21 .form-item, .form-actions {
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
+#node-21 label {
+  margin-right: 2px;
+  font-weight: normal;
+}
+
+#n_s_logo {
+  background: url("../images/home-gray.png") no-repeat center center #E4EADD;
+} 

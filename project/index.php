@@ -1,7 +1,9 @@
-<?php
+<?php session_start();
 
 // all right ...
 
-require './pages/first.php';
+//print_r($_SESSION);
+
+require 'first.php';
 
 ?>
