@@ -9,7 +9,15 @@ require 'pages/html/header.php';
 if ($_POST[register]) {
 
 	// TODO insert in to the db the values
-	// TODO status 1 and level
+	// TODO status 1 and level 
+	
+	// add token column  in the db table user
+	// inser rndum tokn to db
+	// send the user emil with his toen 
+	// in the email he/she will have activation link with the token 
+	// 
+	
+	
 
 	// send mail to us
 
