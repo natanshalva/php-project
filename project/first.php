@@ -1,15 +1,25 @@
 <?php 
 
-require '/class/db.php';
-
+require_once '/class/db.php';
+require_once '/class/user.php';
 echo $db->last_query;
+
+$user = new User;
+$user->first_log_in();
 
 
 require './pages/html/header.php';
 ?>
-
+	<div class="message">
+		<?php 
+		 if(isset($_SESSION['message'])){
+		 	print $_SESSION['message'];
+			session_unset($_SESSION['message']); 
+		 }
+		?>
+	</div>
 <div id="main">
-	
+
 	<header>
 		<h1>Title</h1>
 	</header>

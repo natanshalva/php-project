@@ -1,34 +1,65 @@
-<?php
+<?php session_start();
 
-require '/class/db.php';
+require_once '/class/db.php';
+require_once '/class/user.php';
 
-echo $db -> last_query;
 
-require 'pages/html/header.php';
 
-if ($_POST[register]) {
+if(isset($_POST['register'])) {
 
-	// TODO insert in to the db the values
-	// TODO status 1 and level 
+	$name = $_POST['name'];
+	$family = $_POST['family'];
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	$pass = $_POST['pass'];
 	
-	// add token column  in the db table user
-	// inser rndum tokn to db
-	// send the user emil with his toen 
-	// in the email he/she will have activation link with the token 
-	// 
+	$pass_hash = sha1($pass) ;
 	
+	$user = new User();
 	
-
-	// send mail to us
-
+	$user->name = $name;
+	$user->family = $family;
+	$user->username = $username;
+	$user->email = $email;
+	$user->pass = $pass_hash;
+	
+	$token = sha1(rand()) ;
+	$user->token = $token ;
+    $success = $user->user_insert_to_db();
+    
+	if($success == TRUE){
+	
 	$to = 'nobody@example.com';
-	$subject = 'the subject';
-	$message = 'hello';
+	$subject = 'new user ';
+	$message = 'please active your account :<br> 
+	<a href="http://localhost/php/project/index.php?token=$token">are site</a>';
 	$headers = 'From: webmaster@example.com' . "\r\n" . 'Reply-To: webmaster@example.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
 	mail($to, $subject, $message, $headers);
+		
+	$_SESSION['message'] = "mail bla bla ... ";
+	
+	header("Location: index.php");
+	
+	exit;
+		
+	}
+	
+	// TODO insert in to the db the values
+	// TODO status 1 and level
+
+	// add token column  in the db table user
+	// inser rndum tokn to db
+	// send the user emil with his toen
+	// in the email he/she will have activation link with the token
+	//
+
+	// send mail to us
+
+
 
 }
+require 'pages/html/header.php';
 ?>
 
 <div id="main">
