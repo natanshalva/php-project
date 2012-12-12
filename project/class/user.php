@@ -55,6 +55,9 @@ class User {
 			$result = $db->query($sql);
 
 			$test = $this->test_result_form_db($result);
+			
+			
+			
 			return $test ;
 		}
 		
