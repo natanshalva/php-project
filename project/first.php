@@ -85,9 +85,9 @@ require './pages/html/header.php';
 		</article>
 		<div class="gallery">
 			<!-- Elastislide Carousel -->
-			<ul id="carousel" class="elastislide-list">
+			<ul id="carousel" class="elastislide-list demo-4">
 				<li data-preview="images/large/4.jpg">
-					<a href="#"><img src="images/small/4.jpg" alt="image04" /></a>
+					<a href="#" class="demo-4"><img src="images/small/4.jpg" alt="image04" /></a>
 				</li>
 				<li data-preview="images/large/5.jpg">
 					<a href="#"><img src="images/small/5.jpg" alt="image05" /></a>
@@ -154,6 +154,40 @@ require './pages/html/header.php';
 		</div>
 	</div>
 </div>
+		<script type="text/javascript">
+			
+			// example how to integrate with a previewer
+
+			var current = 0,
+				$preview = $( '#preview' ),
+				$carouselEl = $( '#carousel' ),
+				$carouselItems = $carouselEl.children(),
+				carousel = $carouselEl.elastislide( {
+					current : current,
+					minItems : 4,
+					onClick : function( el, pos, evt ) {
+
+						changeImage( el, pos );
+						evt.preventDefault();
+
+					},
+					onReady : function() {
+
+						changeImage( $carouselItems.eq( current ), current );
+						
+					}
+				} );
+
+			function changeImage( el, pos ) {
+
+				$preview.attr( 'src', el.data( 'preview' ) );
+				$carouselItems.removeClass( 'current-img' );
+				el.addClass( 'current-img' );
+				carousel.setCurrent( pos );
+
+			}
+
+		</script>
 <?php
 
 require 'pages/html/footer.php';

@@ -1,0 +1,22 @@
+<MyPersonalInformation>
+	<FullName>
+		<FirstName>Mandrix Mortel</FirstName>
+		<FirstName>Mandrix2 Mortel</FirstName>
+		<FirstName>Mandrix3 Mortel</FirstName>
+		<FirstName>Mandrix4 Mortel</FirstName>
+		<FirstName>Mandrix5 Mortel</FirstName>
+		<LastName>Mortini</LastName>
+	</FullName>
+	<BirthDate>
+		<Month>May</Month>
+		<Date>17</Date>
+		<Year>1983</Year>
+	</BirthDate>
+	<Address>
+		<Street>St. Michael</Street>
+		<Province>Palo</Province>
+		<City>Tacloban</City>
+		<Country>Philippines</Country>
+		<PostalCode>6501</PostalCode>
+	</Address>
+</MyPersonalInformation>
